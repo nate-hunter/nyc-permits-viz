@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nyc-permits-viz/static/css/main.98ccaa15.chunk.css",
-    "main.js": "/nyc-permits-viz/static/js/main.d2517d98.chunk.js",
-    "main.js.map": "/nyc-permits-viz/static/js/main.d2517d98.chunk.js.map",
+    "main.js": "/nyc-permits-viz/static/js/main.6d4c0ff6.chunk.js",
+    "main.js.map": "/nyc-permits-viz/static/js/main.6d4c0ff6.chunk.js.map",
     "runtime-main.js": "/nyc-permits-viz/static/js/runtime-main.c3db2fda.js",
     "runtime-main.js.map": "/nyc-permits-viz/static/js/runtime-main.c3db2fda.js.map",
     "static/css/2.266e55a5.chunk.css": "/nyc-permits-viz/static/css/2.266e55a5.chunk.css",
     "static/js/2.3547912b.chunk.js": "/nyc-permits-viz/static/js/2.3547912b.chunk.js",
     "static/js/2.3547912b.chunk.js.map": "/nyc-permits-viz/static/js/2.3547912b.chunk.js.map",
     "index.html": "/nyc-permits-viz/index.html",
-    "precache-manifest.1782ce5ba966ca1e5b02923c0850b01c.js": "/nyc-permits-viz/precache-manifest.1782ce5ba966ca1e5b02923c0850b01c.js",
+    "precache-manifest.1b94d98330e0912c3a1a01c184f6e289.js": "/nyc-permits-viz/precache-manifest.1b94d98330e0912c3a1a01c184f6e289.js",
     "service-worker.js": "/nyc-permits-viz/service-worker.js",
     "static/css/2.266e55a5.chunk.css.map": "/nyc-permits-viz/static/css/2.266e55a5.chunk.css.map",
     "static/css/main.98ccaa15.chunk.css.map": "/nyc-permits-viz/static/css/main.98ccaa15.chunk.css.map",
