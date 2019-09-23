@@ -10,7 +10,6 @@ class Home extends React.Component {
             <div>
                 {/* <NavBar /> */}
                 <h1>PROJECT HOME PAGE</h1>
-                <h1>PROJECT HOME PAGE</h1>
                 <Container fluid>
                     <Button outline color="primary"><Link to="/2018">2018</Link></Button>{' '}
                     <Button outline color="primary"><Link to="/2019">2019</Link></Button>{' '}

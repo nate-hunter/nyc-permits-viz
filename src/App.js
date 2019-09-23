@@ -16,8 +16,6 @@ import StackedChartSB from './sandbox/StackedChartSB';
 
 function App() {
   return (
-    <div>
-    <div><p>welcome</p></div>
     <Router>
       <NavBar />
       <Switch>
@@ -34,7 +32,6 @@ function App() {
         <Route path='/stackedchart-sb' exact={true} component={StackedChartSB} />
       </Switch>
     </Router>
-    </div>
   );
 }
 
