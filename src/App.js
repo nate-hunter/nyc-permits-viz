@@ -20,6 +20,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route path='/' exact={true} component={Home} />
+        <Route path='/nyc-permits-viz' exact={true} component={Home} />
         <Route path='/about' exact={true} component={About} />
         {/* <Route path='/barchart' exact={true} component={BarChart} /> */}
         <Route path='/2018' exact={true} component={ClusterChart2018} />
