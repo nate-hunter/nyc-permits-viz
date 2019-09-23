@@ -2,13 +2,35 @@
   text-align: center;
 }
 
+/* .test {
+  background-color: rgb(201, 248, 201);
+} */
+
 .App-logo {
   height: 40vmin;
 }
+/* 
+.navbar-brand>img {
+  padding: 10px 14px;
+  align-items: center;
+  height: 10vmin;
+
+} */
+
+.nav-img>img {
+  /* padding: 10px 14px; */
+  /* align-items: center; */
+  height: 5vmin;
+
+}
+
+/* .nav-item {
+  align-items: center;
+} */
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,3 +42,114 @@
 .App-link {
   color: #09d3ac;
 }
+
+#bar-chart-sb, #cluster-chart-sb {
+  display:block;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+/* BAR CHART TOOL TIP */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  /* fill: slategray; */
+  fill: #00BFFF;
+  /* opacity: 0.7; */
+}
+
+.bar:hover {
+  fill: slategray;
+  fill: rgb(82, 82, 82);
+  opacity: 1;
+  /* fill: orangered;
+  fill: rgb(240, 240, 154); */
+  /* opacity: 0.3; */
+}
+
+.x.axis path {
+  display: none;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  /* width: 100%; */
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+/* .d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+} */
+
+/*
+CUSTOM TOOLTIP
+*/
+
+/*
+.custom-tip {
+  position:absolute;
+  text-align: center;
+  width: auto;
+  height:auto;
+  background-color: rgb(57, 63, 63);
+  border-radius: 10px;
+  color: #787777;
+  padding: 6px 12px;
+  z-index:3;
+}
+*/
+
+/* .custom-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  width: 100%;
+  line-height: 1;
+  color: #EDE3D1;
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+  margin: -3px 0 0 0;
+  top: 100%;
+  left: 0;
+} */
+
+/* .custom-tip span {
+    display: block;
+    
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
+
+#thumbnail {
+    width: 200px;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    color: #787777;
+    text-align: center;
+  } */

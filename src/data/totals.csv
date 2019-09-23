@@ -1,0 +1,6 @@
+borough_code,borough_name,permit_tap,sewer_permit_install,sewer_permit_plug,sewer_permit_ctch_basin_man,sewer_permit_ctch_basin,sewer_permit_private,total
+1,MANHATTAN,1759,481,348,49,2,4,2643
+2,BRONX,1096,390,353,6,1,5,1851
+3,BROOKLYN,4512,1858,1006,39,4,4,7423
+4,QUEENS,2826,1307,801,29,0,10,4973
+5,LONG ISLAND,1323,1051,317,21,0,3,2715

@@ -1,0 +1,11 @@
+borough_code	borough_name	permit_tap	sewer_permit_install	sewer_permit_plug	sewer_permit_ctch_basin_man	sewer_permit_ctch_basin	sewer_permit_private	year
+1	MANHATTAN	710	198	146	12	2	1	2019
+2	BRONX	421	158	130	3	1	2	2019
+3	BROOKLYN	1816	717	429	19	4	1	2019
+4	QUEENS	1066	526	315	10	0	4	2019
+5	LONG ISLAND	463	335	91	8	0	0	2019
+1	MANHATTAN	1049	283	202	37	0	3	2018
+2	BRONX	675	232	223	3	0	3	2018
+3	BROOKLYN	2696	1141	577	20	0	3	2018
+4	QUEENS	1760	781	486	19	0	6	2018
+5	LONG ISLAND	860	716	226	13	0	3	2018
