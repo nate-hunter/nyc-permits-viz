@@ -9,6 +9,6 @@
 ----------------------------------------------------------------------------------
 ### WHY THIS PROJECT:
 - practice D3.js on a simple dataset (for future use, especially w/NBA Contracts projet)
-- tie in past life, giving my resume some continuity and puropse
+- tie in past experience
 - can use data to create graphs and charts, AND maps. 
 - frontend only so can easily host on github pages.
