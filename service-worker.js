@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/nyc-permits-viz/precache-manifest.c137af5de17f26770dbfdeb82993f5da.js"
+  "/nyc-permits-viz/precache-manifest.51688d130316cb56dacb739331cbb373.js"
 );
 
 self.addEventListener('message', (event) => {
