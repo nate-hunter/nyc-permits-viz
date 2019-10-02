@@ -20,8 +20,10 @@ class ClusterChart2018 extends React.Component {
         const canvas = d3.select(this.refs.canvas);
 
         const svg = canvas.append("svg")
-            .attr("width", 1000)
-            .attr("height", 900)
+            .attr("viewBox", `0 0 1000 900`)
+            // .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+            // .attr("width", 1000)
+            // .attr("height", 900)
             .style("border", "1px solid black")
 
         const padding = 1.5, 
@@ -32,7 +34,13 @@ class ClusterChart2018 extends React.Component {
         const graphWidth = 600 - margin.left - margin.right;
         const graphHeight = 600 - margin.top - margin.bottom;
         
-        const mColors = d3.scaleOrdinal(d3['schemeSet2']);
+        // const colors = ["#1E90FF", "#00BFFF", "#ADD8E6", "#DDA0DD", "#BA55D3", "#4B0082"];
+        const colors = ["#1E90FF", "#00BFFF", "#fc8d62", "#DDA0DD", "#BA55D3", "#4B0082"];
+
+
+        const mColors = d3.scaleOrdinal(colors);
+        // console.log(d3['schemeSet2'])
+        // const mColors = d3.scaleOrdinal(d3['schemeSet2']);
         // const mColors = d3.scaleOrdinal(d3['schemeBrBG']);
         // const mColors = d3.scaleOrdinal(d3.schemeBlues[5]);
 
@@ -108,7 +116,8 @@ class ClusterChart2018 extends React.Component {
 
         const clusters = new Array(distinctBoroughScale);
 
-        const legendColorsArray = ["#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854"]
+        // const legendColorsArray = ["#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854"]
+        const legendColorsArray = colors;
  
         scaleLegend.domain(d3.extent(data, d => +d.permit_count ))
             .range([10, maxRadius])
@@ -132,7 +141,8 @@ class ClusterChart2018 extends React.Component {
         scaleLegendGroup.select("g")
             // .attr("fill", "darkblue")
             // .attr("fill", "orangered")
-            .attr("fill", "#8da0cb")
+            .attr("fill", "#00BFFF")
+            // .attr("fill", "#8da0cb")
 
         //---------------------------BUILD NODES---------------------------------
         const nodes = d3.range(data.length)

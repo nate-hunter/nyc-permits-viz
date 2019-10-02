@@ -16,7 +16,7 @@ import data from '../data/all.csv';
 // [] axis lines
 // [~] margins/style/etc
 
-class StackedChartSB extends React.Component {
+class StackedChartAll extends React.Component {
 
     componentDidMount(){
         d3.csv(data, d => {
@@ -208,7 +208,7 @@ class StackedChartSB extends React.Component {
 
 
         return(
-            <Container fluid>
+            <Container fluid className="stacked-chart-cont">
                 <h1>STACKED CHART DEMO</h1>
                 <div id="stacked-chart-sb" className="stacked-chart" ref="canvas"></div>
                 Select year: 
@@ -220,4 +220,4 @@ class StackedChartSB extends React.Component {
     }
 }
 
-export default StackedChartSB;
+export default StackedChartAll;

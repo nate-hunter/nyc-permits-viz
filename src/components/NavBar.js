@@ -1,5 +1,5 @@
 import React from 'react';
-import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink, Container } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import DEPLogo from '../images/New_York_City_Department_of_Environmental_Protection_logo.png';
 // import DEPLogo from '../images/nyc-ep01.png';
@@ -21,14 +21,15 @@ class NavBar extends React.Component {
             isOpen: !this.state.isOpen
         });
     }
-
+ 
     render(){
         return(
-            <Navbar color="dark" dark expand="md" >
+
+            <Navbar className="nav-color" dark expand="md">
                 {/* <NavbarBrand tag={Link} to="https://www1.nyc.gov/site/dep/index.page"><img src={DEPLogo} alt="DEP Logo" /></NavbarBrand>
                 <NavbarBrand tag={Link} to="https://data.cityofnewyork.us/Environment/Water-and-Sewer-Permits/4k4u-823g"><img src={DataLogo} alt="Open Data Logo" /></NavbarBrand> */}
-                <NavbarBrand tag={Link} to="/">Home</NavbarBrand>
-                <NavbarBrand tag={Link} to="/about">About</NavbarBrand>
+                <NavbarBrand className="text-muted" tag={Link} to="/">Home</NavbarBrand>
+                <NavbarBrand className="text-muted" tag={Link} to="/about">About</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>
@@ -49,6 +50,7 @@ class NavBar extends React.Component {
                     </Nav>
                 </Collapse>
             </Navbar>
+
         );
     };
 };

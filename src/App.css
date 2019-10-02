@@ -2,31 +2,25 @@
   text-align: center;
 }
 
-/* .test {
-  background-color: rgb(201, 248, 201);
-} */
-
-.App-logo {
-  height: 40vmin;
+.nav-color {
+  /* background-color: #a3a37d; */
+  background-color: moccasin	;
 }
-/* 
-.navbar-brand>img {
-  padding: 10px 14px;
-  align-items: center;
-  height: 10vmin;
 
-} */
+.nav-text {
+  color: black;
+}
 
 .nav-img>img {
-  /* padding: 10px 14px; */
-  /* align-items: center; */
-  height: 5vmin;
-
+  height: 25px;
 }
 
-/* .nav-item {
-  align-items: center;
-} */
+.home-cont, .about-cont, .stacked-chart-cont {
+  margin: 20px 20px;
+}
+
+
+
 
 .App-header {
   background-color: #282c34;
