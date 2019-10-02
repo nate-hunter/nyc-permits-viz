@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "831181ddcaa96109237d0714bbe68d9d",
+    "revision": "e82855c8e134393915f685c039755850",
     "url": "/nyc-permits-viz/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nyc-permits-viz/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "89bad12311720f0e2093",
+    "revision": "072eaa6e999abea738b7",
     "url": "/nyc-permits-viz/static/css/main.3c1673c6.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nyc-permits-viz/static/js/2.fe907c94.chunk.js"
   },
   {
-    "revision": "89bad12311720f0e2093",
-    "url": "/nyc-permits-viz/static/js/main.4d82d310.chunk.js"
+    "revision": "072eaa6e999abea738b7",
+    "url": "/nyc-permits-viz/static/js/main.c9c7ed88.chunk.js"
   },
   {
     "revision": "6cbed469b034ce852176",
