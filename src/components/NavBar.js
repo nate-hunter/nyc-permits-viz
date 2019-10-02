@@ -26,8 +26,6 @@ class NavBar extends React.Component {
         return(
 
             <Navbar className="nav-color" dark expand="md">
-                {/* <NavbarBrand tag={Link} to="https://www1.nyc.gov/site/dep/index.page"><img src={DEPLogo} alt="DEP Logo" /></NavbarBrand>
-                <NavbarBrand tag={Link} to="https://data.cityofnewyork.us/Environment/Water-and-Sewer-Permits/4k4u-823g"><img src={DataLogo} alt="Open Data Logo" /></NavbarBrand> */}
                 <NavbarBrand className="text-muted" tag={Link} to="/">Home</NavbarBrand>
                 <NavbarBrand className="text-muted" tag={Link} to="/about">About</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
@@ -40,11 +38,9 @@ class NavBar extends React.Component {
                             <NavLink className="nav-img" href="https://data.cityofnewyork.us/Environment/Water-and-Sewer-Permits/4k4u-823g"><img src={DataLogo} alt="Open Data Logo" /></NavLink>
                         </NavItem>
                         <NavItem>
-                            {/* <NavLink className="nav-item" href="https://twitter.com/_nate_hunter_">@_nate_hunter_</NavLink> */}
                             <NavLink className="nav-img" href="https://twitter.com/_nate_hunter_"><img src={TwitterLogo} alt="Twitter Logo" /></NavLink>
                         </NavItem>
                         <NavItem>
-                            {/* <NavLink className="nav-item" href="https://github.com/nate-hunter">GitHub</NavLink> */}
                             <NavLink className="nav-img" href="https://github.com/nate-hunter"><img src={GithubLogo} alt="Github Logo" /></NavLink>
                         </NavItem>
                     </Nav>

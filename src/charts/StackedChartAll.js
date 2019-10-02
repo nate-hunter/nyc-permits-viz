@@ -2,7 +2,6 @@ import React from 'react';
 import * as d3 from 'd3';
 import d3Tip from 'd3-tip'; 
 import { Container } from 'reactstrap';
-// import data from '../data/totals.csv';
 import data from '../data/all.csv';
 
 //-----CHECKLIST-----
@@ -26,15 +25,12 @@ class StackedChartAll extends React.Component {
 
     drawStackedChart(csv){
         //---------------------------SPACE SETUP---------------------------------
-        // console.log("in drawStackedChart()",data)
-        // const margin = { top: 20, right: 160, bottom: 35, left: 30 };
         const margin = { top: 40, right: 40, bottom: 5, left: 40 };
 
         const width = 1000 - margin.left - margin.right;
         const height = 700 - margin.top - margin.bottom;
 
         //---------------------------VARIABLES----------------------------------
-        // var colors = ["#2F4F4F", "#b33040", "#d25c4d", "#f2b447", "#d9d574"];
         const colors = ["#1E90FF", "#00BFFF", "#ADD8E6", "#DDA0DD", "#BA55D3", "#4B0082"];
 
         const keys = csv.columns.slice(2,8);
@@ -81,15 +77,6 @@ class StackedChartAll extends React.Component {
         .offset([-2, 0])
         .direction("n")
         .html(function(d) {
-            // const mainHTML = "<div id='thumbnail'><h3>" + d.borough_name + "</h3></div>"
-            // +"PERMIT TAP" + ": <span style='color:orange'>" + formatComma(d.permit_tap) + "</span>"
-            // +"<p>SEWER PERMIT - INSTALL: " + "<span style='color:orangered'>" + formatComma(d.sewer_permit_install)+"</span> </p>"
-            // +"<p>SEWER PERMIT - PLUG: " + "<span style='color:orange'>" + formatComma(d.sewer_permit_plug)+"</span> </p>"
-            // +"<p>SEWER PERMIT - CATCH BASIN (MAN): " + "<span style='color:orange'>" + formatComma(d.sewer_permit_ctch_basin_man)+"</span> </p>"
-            // +"<p>SEWER PERMIT - CATCH BASIN: " + "<span style='color:orange'>" + d.sewer_permit_ctch_basin+"</span> </p>"
-            // +"<p>SEWER PERMIT - PRIVATE: " + "<span style='color:orange'>" +d.sewer_permit_private+"</span> </p>"
-            // +"<p>TOTAL PERMITS: " + "<span style='color:orangered'>" +d.total+"</span> </p>";
-
             const mainHTML = `<div id='thumbnail'><h3 style='color:steelblue'>${d.borough_name}</h3></div>` 
                 + `<p>TOTAL PERMITS: <span style='color:orangered'>${formatComma(d.total)}</span></p>`
             return mainHTML;
@@ -209,7 +196,6 @@ class StackedChartAll extends React.Component {
 
         return(
             <Container fluid className="stacked-chart-cont">
-                <h1>STACKED CHART DEMO</h1>
                 <div id="stacked-chart-sb" className="stacked-chart" ref="canvas"></div>
                 Select year: 
                 <select id="year"></select>

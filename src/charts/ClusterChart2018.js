@@ -1,8 +1,6 @@
 import React from 'react';
 import * as d3 from 'd3';
 import { Container } from 'reactstrap';
-// import NavBar from '../components/NavBar';
-// import data from './data/all.csv';
 import data from '../data/2018.csv';
 import d3Tip from 'd3-tip';
 import d3Legend from 'd3-svg-legend';
@@ -34,15 +32,10 @@ class ClusterChart2018 extends React.Component {
         const graphWidth = 600 - margin.left - margin.right;
         const graphHeight = 600 - margin.top - margin.bottom;
         
-        // const colors = ["#1E90FF", "#00BFFF", "#ADD8E6", "#DDA0DD", "#BA55D3", "#4B0082"];
         const colors = ["#1E90FF", "#00BFFF", "#fc8d62", "#DDA0DD", "#BA55D3", "#4B0082"];
 
 
         const mColors = d3.scaleOrdinal(colors);
-        // console.log(d3['schemeSet2'])
-        // const mColors = d3.scaleOrdinal(d3['schemeSet2']);
-        // const mColors = d3.scaleOrdinal(d3['schemeBrBG']);
-        // const mColors = d3.scaleOrdinal(d3.schemeBlues[5]);
 
         const mainCanvas = svg.append("g")
             .attr("width", graphWidth / 2 )
@@ -69,12 +62,7 @@ class ClusterChart2018 extends React.Component {
         //---------------------------LEGEND---------------------------------
         const legendGroup = svg.append("g")
             .attr("transform", `translate(${graphWidth + 300}, 30)`);
-            // .attr("transform", `translate(${graphWidth + 100}, 30)`);
 
-        //!!!!!!!!!!!!!!!!!! NEED TO IMPORT LEGEND !!!!!!!!!!!!!!!!!!!!!!!
-        // LINK =>>> <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
-        // console.log(d3Legend);
-        // const legend = d3.legendColor()
         const legend = d3Legend.legendColor()
             .shape("circle")
             .shapePadding(4)
@@ -84,11 +72,9 @@ class ClusterChart2018 extends React.Component {
         const scaleLegendGroup = svg.append("g")
             .attr("class", "scale-legend")
             .attr("transform", `translate(${graphWidth / 2 - 150}, 30)`);
-            // .attr("transform", `translate(${graphWidth / 2 - 100}, 30)`);
 
         const scaleLegend = d3.scaleLinear();
 
-        //!!!!!!!!!!!!!!!!!! NEED TO IMPORT LEGEND !!!!!!!!!!!!!!!!!!!!!!!
         const legendSize = d3Legend.legendSize()
             .scale(scaleLegend)
             .shape("circle")
@@ -116,7 +102,6 @@ class ClusterChart2018 extends React.Component {
 
         const clusters = new Array(distinctBoroughScale);
 
-        // const legendColorsArray = ["#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854"]
         const legendColorsArray = colors;
  
         scaleLegend.domain(d3.extent(data, d => +d.permit_count ))
@@ -125,24 +110,19 @@ class ClusterChart2018 extends React.Component {
         mColors.domain(data.map( d => d.borough_name ))
             .range(legendColorsArray);
 
-        //!!!!!!!!!!!!!!!!!! NEED TO IMPORT LEGEND !!!!!!!!!!!!!!!!!!!!!!!
+        //---------------------------LEGEND---------------------------------
         legendGroup.call(legend);
 
         legendGroup.selectAll("text")
             .attr("fill", "darkblue")
-            // .attr("fill", "white")
 
         scaleLegendGroup.call(legendSize);
 
         scaleLegendGroup.selectAll("text")
             .attr("fill", "darkblue")
-            // .attr("fill", "white")
             
         scaleLegendGroup.select("g")
-            // .attr("fill", "darkblue")
-            // .attr("fill", "orangered")
             .attr("fill", "#00BFFF")
-            // .attr("fill", "#8da0cb")
 
         //---------------------------BUILD NODES---------------------------------
         const nodes = d3.range(data.length)
@@ -169,9 +149,7 @@ class ClusterChart2018 extends React.Component {
 
         //---------------------------USING THE FORCE---------------------------------
         const force = d3.forceSimulation()
-            // .force("center", d3.forceCenter(graphWidth, graphHeight))
             .force("center", d3.forceCenter(graphWidth, graphHeight / 2))
-            // .force("center", d3.forceCenter(graphWidth / 2, graphHeight / 2))
 
             .force("cluster", cluster()
                 .strength(.6))
@@ -211,7 +189,6 @@ class ClusterChart2018 extends React.Component {
         
             var nodes,
                 strength = 0.1;
-                // strength = 0.1;
 
             function force (alpha) {
 
@@ -249,25 +226,15 @@ class ClusterChart2018 extends React.Component {
 
             return force;
         }
-
-
         //------bottom of drawClusterChart()-----
     }
 
     render(){
         return(
             <Container fluid>
-                {/* <NavBar /> */}
                     <h2 id="cluster-chart-sb" className="cluster-chart-header">2018 DATA IN CLUSTERS</h2>
                     <div id="cluster-chart-sb" className="cluster-chart" ref="canvas"></div>
             </Container>
-            // <div className="test">
-            //     <NavBar />
-            //         <h2 id="cluster-chart-sb" className="cluster-chart-header">2018 DATA IN CLUSTERS</h2>
-            //         <div id="cluster-chart-sb" className="cluster-chart" ref="canvas"></div>
-            // </div>
-                        
-                
         );
     }
 }
