@@ -25,9 +25,9 @@ class NavBar extends React.Component {
     render(){
         return(
 
-            <Navbar className="nav-color" dark expand="md">
-                <NavbarBrand className="text-muted" tag={Link} to="/">Home</NavbarBrand>
-                <NavbarBrand className="text-muted" tag={Link} to="/about">About</NavbarBrand>
+            <Navbar className="nav-color" light expand="md">
+                <NavbarBrand tag={Link} to="/">Home</NavbarBrand>
+                <NavbarBrand tag={Link} to="/about">About</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>
