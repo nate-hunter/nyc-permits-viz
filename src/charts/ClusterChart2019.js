@@ -21,7 +21,7 @@ class ClusterChart2018 extends React.Component {
             .attr("viewBox", `0 0 1000 900`)
             // .attr("width", 1000)
             // .attr("height", 900)
-            .style("border", "1px solid black")
+            // .style("border", "1px solid black")
 
         const padding = 1.5, 
             // clusterPadding = 16, 
@@ -31,9 +31,10 @@ class ClusterChart2018 extends React.Component {
         const graphWidth = 600 - margin.left - margin.right;
         const graphHeight = 600 - margin.top - margin.bottom;
         
-        const colors = ["#1E90FF", "#00BFFF", "#fc8d62", "#DDA0DD", "#BA55D3", "#4B0082"];
+        // const colors = ["#1E90FF", "#00BFFF", "#fc8d62", "#DDA0DD", "#BA55D3", "#4B0082"];
 
-        const mColors = d3.scaleOrdinal(colors);
+        // const mColors = d3.scaleOrdinal(colors);
+        const mColors = d3.scaleOrdinal(d3['schemeSet2']);
 
         const mainCanvas = svg.append("g")
             .attr("width", graphWidth / 2 )
@@ -61,7 +62,6 @@ class ClusterChart2018 extends React.Component {
         const legendGroup = svg.append("g")
             .attr("transform", `translate(${graphWidth + 300}, 30)`);
 
-        //---------------------------LEGEND---------------------------------
         const legend = d3Legend.legendColor()
             .shape("circle")
             .shapePadding(4)
@@ -102,7 +102,7 @@ class ClusterChart2018 extends React.Component {
         const clusters = new Array(distinctBoroughScale);
 
         //---------------------------LEGEND---------------------------------
-        const legendColorsArray = colors;
+        const legendColorsArray = ["#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854"];
  
         scaleLegend.domain(d3.extent(data, d => +d.permit_count ))
             .range([10, maxRadius])
