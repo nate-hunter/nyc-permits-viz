@@ -103,3 +103,81 @@ class AllBarChart extends React.Component {
 }
 
 export default AllBarChart;
+
+
+/*
+drawBarChartTest(data){
+        const margin = { top: 40, right: 20, bottom: 30, left: 40 },
+            width = 960 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom;
+
+        //---------------------------AXIS---------------------------------
+        const x = d3.scaleBand()
+            .domain(data.map(item => item.borough_name))
+            .range([0, width])
+            .paddingInner(0.2)
+            .paddingOuter(0.2);
+
+        const y = d3.scaleLinear()
+            .domain( [0, d3.max(data, d => d.total)] )
+            .range([height, 0]);
+
+        const xAxis = d3.axisBottom(x);
+        const yAxis = d3.axisLeft(y);
+        
+        //---------------------------TIP---------------------------------
+        const formatComma = d3.format(",");
+
+        const tip = d3Tip()
+            .attr("class", "d3-tip")
+            .offset([-2, 0])
+            .direction("n")
+            .html(function(d) {
+                const mainHTML = `<div id='thumbnail'><h3 style='color:steelblue'>${d.borough_name}</h3></div>` 
+                    + `<p>TOTAL PERMITS: <span style='color:orangered'>${formatComma(d.total)}</span></p>`
+                return mainHTML;
+            })
+
+        //---------------------------BUILD SVG---------------------------------
+        const svg = d3.select(this.refs.canvas).append("svg")
+            .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+            // .attr("width", width + margin.left + margin.right)
+            // .attr("height", height + margin.top + margin.bottom)
+            // .style("border", "1px solid black")
+            .append("g")
+            .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+        svg.call(tip);
+
+        //---------------------------BUILD AXIS---------------------------------
+        svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", `translate(0, ${height})`)
+            .call(xAxis);
+        
+        svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis)
+            .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .text("Permits");
+
+            
+        //---------------------------USE DATA---------------------------------
+        svg.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", (d) => x(d.borough_name) )
+                .attr("width", x.bandwidth)
+                .attr("y", d => y(d.total) )
+                .attr("height", d => height - y(d.total) )
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide)
+        //------bottom of drawBarChartTest()-----
+    }
+
+*/

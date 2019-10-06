@@ -1,7 +1,7 @@
 import React from 'react';
 import * as d3 from 'd3';
 import d3Tip from 'd3-tip'; 
-import { Container } from 'reactstrap';
+import { Container, ButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import data from '../data/all.csv';
 
 //-----CHECKLIST-----
@@ -11,7 +11,7 @@ import data from '../data/all.csv';
 // [x] sort
 // [] group <-> stack 
 // [x] legend
-// [] tooltip !!!! RESEARCH USING TOOLTIP AND TRANSITION()
+// [] tooltip !!!! RESEARCH USING TOOLTIP AND TRANSITION() IN REACT
 // [] axis lines
 // [~] margins/style/etc
 
@@ -199,6 +199,7 @@ class StackedChartAll extends React.Component {
             <Container fluid className="stacked-chart-cont">
                 <div id="stacked-chart-sb" className="stacked-chart" ref="canvas"></div>
                 Select year: 
+
                 <select id="year"></select>
                 <input type="checkbox" id="sort"></input>
                 Sort By Totals
@@ -208,3 +209,5 @@ class StackedChartAll extends React.Component {
 }
 
 export default StackedChartAll;
+
+
