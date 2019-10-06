@@ -15,7 +15,11 @@
   height: 25px;
 }
 
-.home-cont, .about-cont, .stacked-chart-cont {
+/* .dep-img>img {
+  height: 45px;
+} */
+
+.home-cont, .about-cont, .stacked-chart-cont, .map-cont {
   margin: 20px 20px;
 }
 

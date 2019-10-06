@@ -33,15 +33,16 @@ class NavBar extends React.Component {
                     <Nav className="ml-auto" navbar>
                         <NavItem>
                             <NavLink className="nav-img" href="https://www1.nyc.gov/site/dep/index.page"><img src={DEPLogo} alt="DEP Logo" /></NavLink>
+                            {/* <NavLink className="dep-img" href="https://www1.nyc.gov/site/dep/index.page"><img src="https://www1.nyc.gov/assets/dep/images/content/header/logo.svg" alt="DEP Logo" /></NavLink> */}
                         </NavItem>
                         <NavItem>
-                            <NavLink className="nav-img" href="https://data.cityofnewyork.us/Environment/Water-and-Sewer-Permits/4k4u-823g"><img src={DataLogo} alt="Open Data Logo" /></NavLink>
+                            <NavLink className="nav-img" href="https://opendata.cityofnewyork.us/"><img src={DataLogo} alt="Open Data Logo" /></NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink className="nav-img" href="https://twitter.com/_nate_hunter_"><img src={TwitterLogo} alt="Twitter Logo" /></NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className="nav-img" href="https://github.com/nate-hunter"><img src={GithubLogo} alt="Github Logo" /></NavLink>
+                            <NavLink className="nav-img" href="https://github.com/nate-hunter/nyc-permits-viz"><img src={GithubLogo} alt="Github Logo" /></NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>

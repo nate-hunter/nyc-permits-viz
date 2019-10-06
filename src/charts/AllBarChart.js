@@ -95,7 +95,7 @@ class AllBarChart extends React.Component {
 
         return(
             <Container fluid>
-                <h2 id="bar-chart-sb" className="bar-chart-header">WATER AND SEWER PERMITS GRANTED (ALL YEARS)</h2>
+                {/* <h2 id="bar-chart-sb" className="bar-chart-header">WATER AND SEWER PERMITS GRANTED (ALL YEARS)</h2> */}
                 <div id="bar-chart-sb" className="bar-chart" ref="canvas"></div>
             </Container>
         );

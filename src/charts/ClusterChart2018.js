@@ -32,9 +32,7 @@ class ClusterChart2018 extends React.Component {
         const graphWidth = 600 - margin.left - margin.right;
         const graphHeight = 600 - margin.top - margin.bottom;
         
-        // const colors = ["#1E90FF", "#BA55D3", "#00BFFF", "#fc8d62", "#DDA0DD", "#4B0082"];
         // const colors = ["#1E90FF", "#00BFFF", "#fc8d62", "#DDA0DD", "#BA55D3", "#4B0082"];
-        
         // const mColors = d3.scaleOrdinal(colors);
         const mColors = d3.scaleOrdinal(d3['schemeSet2']);
 
@@ -103,10 +101,8 @@ class ClusterChart2018 extends React.Component {
 
         const clusters = new Array(distinctBoroughScale);
 
-        // const legendColorsArray = colors;
         const legendColorsArray = ["#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854"];
-        // const legendColorsArray = ["#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854"];
- 
+
         scaleLegend.domain(d3.extent(data, d => +d.permit_count ))
             .range([10, maxRadius])
 
@@ -234,7 +230,7 @@ class ClusterChart2018 extends React.Component {
     render(){
         return(
             <Container fluid>
-                    <h2 id="cluster-chart-sb" className="cluster-chart-header">2018 DATA IN CLUSTERS</h2>
+                    {/* <h2 id="cluster-chart-sb" className="cluster-chart-header">2018 DATA IN CLUSTERS</h2> */}
                     <div id="cluster-chart-sb" className="cluster-chart" ref="canvas"></div>
             </Container>
         );

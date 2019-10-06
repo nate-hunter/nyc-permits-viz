@@ -5,8 +5,8 @@ class Map extends React.Component {
 
     render(){
         return(
-            <Container flex>
-                <h3>Interactive Map Coming Soon...</h3>
+            <Container fluid className="map-cont">
+                <h3>[ Interactive Map In Development ]</h3>
             </Container>
         )
     }

@@ -47,8 +47,9 @@ class StackedChartAll extends React.Component {
 
         //---------------------------BUILD SVG---------------------------------
         const svg = d3.select(this.refs.canvas).append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
+            .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+            // .attr("width", width + margin.left + margin.right)
+            // .attr("height", height + margin.top + margin.bottom)
             // .style("border", "1px solid black")
 
         //---------------------------AXIS---------------------------------
@@ -200,7 +201,7 @@ class StackedChartAll extends React.Component {
                 Select year: 
                 <select id="year"></select>
                 <input type="checkbox" id="sort"></input>
-                Toggle sort
+                Sort By Totals
             </Container>
         );
     }

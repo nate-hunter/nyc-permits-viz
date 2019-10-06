@@ -231,7 +231,7 @@ class ClusterChart2018 extends React.Component {
     render(){
         return(
             <Container fluid>
-                    <h2 id="cluster-chart-sb" className="cluster-chart-header">2019 DATA IN CLUSTERS</h2>
+                    {/* <h2 id="cluster-chart-sb" className="cluster-chart-header">2019 DATA IN CLUSTERS</h2> */}
                     <div id="cluster-chart-sb" className="cluster-chart" ref="canvas"></div>
             </Container>
                         
