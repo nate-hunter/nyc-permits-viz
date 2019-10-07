@@ -20,7 +20,7 @@ This project addresses the following questions:
 ### PROJECT STEPS:
 1. Data downloaded from NYC Open Data portal
 2. Data cleaned using Google Sheets
-3. Downloaded data as csv and imported into project data folder
+3. Data downloaded as csv and imported into project data folder
 4. Data accessed via D3.js, which was used to create multiple visualizations
 5. Reactstrap used for quick, clean building of mobile friendly styling
-6. Deploy project to GitHub Pages
+6. Project deployed to GitHub Pages
