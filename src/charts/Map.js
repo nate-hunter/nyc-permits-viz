@@ -6,7 +6,7 @@ class Map extends React.Component {
     render(){
         return(
             <Container fluid className="map-cont">
-                <h3>[ Interactive Map In Development ]</h3>
+                <h3>[ Interactive Choropleth Map In Development ]</h3>
             </Container>
         )
     }
