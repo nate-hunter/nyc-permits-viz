@@ -1,6 +1,6 @@
 # NYC WATER AND SEWER PERMITS 
 
-A data visualization projejct using D3.js + React with data obtained from NYC Open Data.
+A data visualization project using D3.js + React with data obtained from NYC Open Data.
 
 This project addresses the following questions:
 1. Which burrough issued the most total permits?
