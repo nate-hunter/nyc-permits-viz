@@ -24,13 +24,12 @@ class StackedChartAll extends React.Component {
     }
 
     drawStackedChart(csv){
-        //---------------------------SPACE SETUP---------------------------------
+        //---------------------------SETUP---------------------------------
         const margin = { top: 40, right: 40, bottom: 5, left: 40 };
 
         const width = 1000 - margin.left - margin.right;
         const height = 700 - margin.top - margin.bottom;
 
-        //---------------------------VARIABLES----------------------------------
         const colors = ["#1E90FF", "#00BFFF", "#ADD8E6", "#DDA0DD", "#BA55D3", "#4B0082"];
 
         const keys = csv.columns.slice(2,8);
@@ -199,8 +198,8 @@ class StackedChartAll extends React.Component {
             <Container fluid className="stacked-chart-cont">
                 <div id="stacked-chart-sb" className="stacked-chart" ref="canvas"></div>
                 Select year: 
-
                 <select id="year"></select>
+
                 <input type="checkbox" id="sort"></input>
                 Sort By Totals
             </Container>
